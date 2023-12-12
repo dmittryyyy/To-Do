@@ -1,0 +1,80 @@
+.inputTask {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  background: #DBE2EF;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.inputTaskField {
+  flex-basis: 90%;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.inputTaskCheckbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #3F72AF;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color, background-color .2s linear;
+
+  &:checked {
+    background-color: #3F72AF;
+
+    & + .inputTaskCheckboxFake {
+      opacity: 1;
+    }
+  }
+
+  &:disabled {
+    border-color: #7B7B7B;
+  }
+}
+
+.inputTaskCheckboxFake {
+  position: absolute;
+  left: 22px;
+  top: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s linear;
+
+  &:before {
+    content: "✓";
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.inputTaskInputEdit {
+  background-color: #DBE2EF;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0 5px 0 -3px #3F72AF;
+}
+
+.inputTaskButtons {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.inputTaskButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  transition: opacity .25s linear;
+  opacity: .7;
+
+  &:hover {
+    opacity: 1;
+  }
+}

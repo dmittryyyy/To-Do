@@ -1,0 +1,36 @@
+.inputAdd {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.inputAddField {
+  flex-basis: 90%;
+  height: 48px;
+  background: #DBE2EF;
+  border: 1px solid rgba(177, 177, 177, 0.40);
+  border-radius: 12px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 8px 32px 8px 12px;
+  font-size: 16px;
+  font-weight: 600;
+
+  &::placeholder {
+    color: #7B7B7B;
+    font-size: 14px;
+  }
+}
+
+.inputAddButton {
+  flex-basis: 10%;
+  height: 100%;
+  background: rgba(#3F72AF, .9);
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  transition: all .25s linear;
+
+  &:hover {
+    background: rgba(#3F72AF, 1);
+  }
+}
